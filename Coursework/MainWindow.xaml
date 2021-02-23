@@ -1,0 +1,49 @@
+﻿<Window x:Class="Coursework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="583.337" Width="1025.951">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,2,-2">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.126"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="btnAddUser" Content="ADD NEW USER" HorizontalAlignment="Left" Margin="131,191,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.101,-1.871" Click="btnAddUser_Click"/>
+        <TextBox x:Name="txtAddName" HorizontalAlignment="Left" Height="36" Margin="131,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <Button x:Name="btnAddLocation" Content="ADD NEW LOCATION" HorizontalAlignment="Left" Margin="151,430,0,0" VerticalAlignment="Top" Width="121" Click="btnAddLocation_Click"/>
+        <TextBox x:Name="txtAddLocation" HorizontalAlignment="Left" Height="36" Margin="151,373,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" RenderTransformOrigin="1.089,-0.31"/>
+        <ListBox x:Name ="lstUserList" SelectionMode="Multiple" HorizontalAlignment="Left" Height="96" Margin="304,96,0,0" VerticalAlignment="Top" Width="375"/>
+        <ListBox x:Name="lstLocationList" SelectionMode="Multiple" HorizontalAlignment="Left" Height="96" Margin="304,368,0,0" VerticalAlignment="Top" Width="374" RenderTransformOrigin="0.5,0.5">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.022"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.043"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Button x:Name="btnRecordVisit" Content="RECORD VISIT OF &#xD;&#xA;USER TO LOCATION" HorizontalAlignment="Left" Margin="304,485,0,0" VerticalAlignment="Top" Width="115" Click="btnRecordVisit_Click"/>
+        <Button x:Name="btnRecordContact" Content="RECORD CONTACT &#xD;&#xA;BETWEEN TWO USERS" HorizontalAlignment="Left" Margin="302,207,0,0" VerticalAlignment="Top" Width="125" Height="36" Click="btnRecordContact_Click"/>
+        <Button x:Name="btnContactPhone" Content="GENERATE TELEPHONE &#xD;&#xA;NUMBER LIST" HorizontalAlignment="Left" Margin="712,207,0,0" VerticalAlignment="Top" Width="140" Height="36" Click="btnContactPhone_Click"/>
+        <Button x:Name="btnVisitPhone" Content="GENERATE TELEPHONE &#xD;&#xA;NUMBER LIST" HorizontalAlignment="Left" Margin="712,485,0,0" VerticalAlignment="Top" Width="133" Height="36" Click="btnVisitPhone_Click"/>
+        <ListBox x:Name="lstContactPhone" x:FieldModifier="public" HorizontalAlignment="Left" Height="96" Margin="712,96,0,0" VerticalAlignment="Top" Width="250"/>
+        <ListBox x:Name="lstVisitPhone" x:FieldModifier="public" HorizontalAlignment="Left" Height="96" Margin="712,368,0,0" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtAddUserPhone" HorizontalAlignment="Left" Height="36" Margin="131,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="70,98,0,0" VerticalAlignment="Top" Width="56" Height="36" FontSize="16"/>
+        <Label Content="Phone Number:" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="120" Height="36" FontSize="16"/>
+        <Label Content="Name of Location:" HorizontalAlignment="Left" Margin="10,373,0,0" VerticalAlignment="Top" Width="150" Height="36" FontSize="16"/>
+        <Label Content="Select the two users from the list &#xD;&#xA;which you want to record contact between:" HorizontalAlignment="Left" Margin="304,39,0,0" VerticalAlignment="Top" Width="314" Height="52" FontSize="16"/>
+        <Label Content="Select the user from the box above and &#xD;&#xA;the location from the box below of which&#xD;&#xA;you want to record a visit between:" HorizontalAlignment="Left" Margin="304,285,0,0" VerticalAlignment="Top" Width="307" Height="73" FontSize="16"/>
+        <Label Content="Select the user on the box to the left &#xD;&#xA;of which contacts you want to generate&#xD;&#xA;a list of phone numbers for:" HorizontalAlignment="Left" Margin="696,17,0,0" VerticalAlignment="Top" Width="302" Height="83" FontSize="16"/>
+        <Label Content="Select the location on the box to the left &#xA;of which visitors you want to generate&#xA;a list of phone numbers for:" HorizontalAlignment="Left" Margin="696,285,0,0" VerticalAlignment="Top" Width="302" Height="83" FontSize="16"/>
+
+    </Grid>
+</Window>
